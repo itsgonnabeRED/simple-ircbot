@@ -9,6 +9,6 @@ A very simple irc bot library written in python.
 * Send and receive messages
 * Hooks for events
 
-An [examplebot.py](example bot) is included.
+An [example bot](examplebot.py) is included.
 
 The documentation will be on the wiki.
