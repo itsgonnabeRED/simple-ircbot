@@ -64,6 +64,7 @@ class IrcBot:
 	"""
 	def change_nick(self, name):
 		self.__send_raw_message('NICK %s' % (name))
+		self.name = name
 
 	"""
 	Sends a messsage to a channel (EX: #Irc) or a user

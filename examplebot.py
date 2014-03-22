@@ -1,6 +1,6 @@
 from ircbot import IrcBot
 
-CHANNEL = '#YourChannel'
+CHANNEL = '#COMMGamers'
 BOT_NAME = 'ExampleBot'
 SERVER = 'chat.freenode.net'
 PORT = 6667
@@ -15,16 +15,13 @@ def OnChannelJoined(user, channel):
 		bot.send_message(channel, "Hello.")
 
 def OnMessage(sender, message, destination):
-	if sender != BOT_NAME:
-		reply = 'Cool story, bro.'
-		bot.send_message(destination, reply)
-	else:
-		print 'I said %s to %s.' % (message, destination)
+	reply = 'Cool story, bro.'
+	bot.send_message(destination, reply)
 
 def main():
 	global bot
 	bot = IrcBot(BOT_NAME, SERVER, PORT)
-	bot.OnServerConnect = connected
+	bot.OnServerConnect = Connected
 	bot.OnJoin = OnChannelJoined
 	bot.OnMessage = OnMessage
 	bot.run()
