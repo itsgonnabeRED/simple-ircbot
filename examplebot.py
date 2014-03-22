@@ -1,6 +1,6 @@
 from ircbot import IrcBot
 
-CHANNEL = '#COMMGamers'
+CHANNEL = '#YourChannel'
 BOT_NAME = 'ExampleBot'
 SERVER = 'chat.freenode.net'
 PORT = 6667
