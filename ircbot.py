@@ -49,10 +49,11 @@ class IrcBot:
 	def __handle_input(self, data):
 		#print data
 		data = data.strip(' \n\r')
+		print data
 		if data.find('PRIVMSG') != -1:
-			nick = data.split('!')[0].replace(':', '')
-			message = ':'.join(data.split(':')[2:])
-			destination = ''.join(data.split(':')[:2]).split(' ')[-2]
+			nick = data.split('!')[0][1:]
+			message = ' '.join(data.split(' ')[3:])[1:] 
+			destination = data.split(' ')[2]
 			self.__OnMessage(nick, message, destination)
 		elif data.find('JOIN') != -1:
 			name = data.split('!')[0][1:]

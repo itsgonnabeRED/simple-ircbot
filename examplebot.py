@@ -16,7 +16,7 @@ def OnChannelJoined(user, channel):
 
 def OnMessage(sender, message, destination):
 	reply = 'Cool story, bro.'
-	bot.send_message(destination, reply)
+	#bot.send_message(destination, reply)
 
 def main():
 	global bot
